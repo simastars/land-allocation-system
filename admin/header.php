@@ -107,6 +107,17 @@ if(!isset($_SESSION['auser']))
 									<li><a href="userbuilder.php"> Builder </a></li>
 								</ul>
 							</li>
+							<li class="menu-title"> 
+								<span>Add Renters</span>
+							</li>
+						
+							<li class="submenu">
+								<a href="#"><i class="fe fe-user"></i> <span> Renter </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="addrenter.php"> Add Renter</a></li>
+									<li><a href="deleterenter.php"> Delete Renter</a></li>
+								</ul>
+							</li>
 
 							<li class="menu-title"> 
 								<span>State & City</span>
@@ -131,7 +142,17 @@ if(!isset($_SESSION['auser']))
 									
 								</ul>
 							</li>
-							
+							<li class="menu-title"> 
+								<span>Allocation Management</span>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="fe fe-users"></i> <span> Allocate</span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="allocateproperty.php"> Allocate Property</a></li>
+									<li><a href="viewallocation.php"> View Allocation </a></li>
+									
+								</ul>
+							</li>
 							
 							
 							<li class="menu-title"> 

@@ -128,7 +128,8 @@ if(!isset($_SESSION['auser']))
 													
                                                     
                                                     <td><?php echo $row['29']; ?></td>
-													<td><a href="propertyedit.php?id=<?php echo $row['0'];?>"><button class="btn btn-info">Edit</button></a>
+													<td><a href="propertydetails.php?id=<?php echo $row['0'];?>"><button class="btn btn-success">View</button></a>
+														<a href="propertyedit.php?id=<?php echo $row['0'];?>"><button class="btn btn-info">Edit</button></a>
                                                     <a href="propertydelete.php?id=<?php echo $row['0'];?>"><button class="btn btn-danger">Delete</button></a></td>
                                                 </tr>
                                                <?php

@@ -1,9 +1,9 @@
 <?php
 
-	$con = mysqli_connect("localhost","root","","realestatephp");
-	if (mysqli_connect_errno())
+	$con = new mysqli("localhost","root","","realestatephp");
+	if (!$con)
 	{
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		echo "Failed to connect to MySQL: " . $con->error;
 	}
 	
 ?>
