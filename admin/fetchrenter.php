@@ -63,9 +63,9 @@ if (isset($_POST['userid'])) {
                                 </div>
                               </div>
                               <div class="d-flex pt-1">
-                                <a href="./assignproperty.php?user='.$row['id'].'" class="btn btn-outline-primary me-1 flex-grow-1" data-rent-id="'.$row['id'].'">Allocate</a>
-                                <button type="button" class="btn btn-danger flex-grow-1">Delete Renter</button>
-                              </div>
+                                <a href="./assignproperty.php?user='.$row['id'].'" class="btn btn-outline-primary me-1 flex-grow-1 allocate" data-rent-id="'.$row['id'].'">Allocate</a>
+                                <button type="button" class="btn btn-danger flex-grow-1 deleterenter" data-rent-id="'.$row['id'].'">Delete Renter</button>
+                              </div> 
                             </div>
                           </div>
                         </div>
@@ -77,7 +77,7 @@ if (isset($_POST['userid'])) {
             }
             echo $output;
         } else {
-            $output .= "No Entries Added";
+            $output .= "No record match your criteria";
             echo $output;
         }
     } else {

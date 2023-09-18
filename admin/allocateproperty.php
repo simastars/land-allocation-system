@@ -212,23 +212,27 @@ if (isset($_POST['add'])) {
 <script>
 	$(document).ready(function() {
 		$(".email").keyup(function() {
-			let id = $(this).val();
-			$.ajax({
-				url: "fetchrenter.php",
-				method: "POST",
-				type: "text",
-				data: {
-					userid: id
-				},
-				beforeSend: function() {
-					$(".result").html("<span class='text-success'>Loading..</span>");
-				},
-				success: function(data) {
-					console.log(data)
-					$(".result").html(data);
-				}
-			})
-		})
+            let id = $(this).val();
+            if (id !== "") {
+                $.ajax({
+                    url: "fetchrenter.php",
+                    method: "POST",
+                    type: "text",
+                    data: {
+                        userid: id
+                    },
+                    beforeSend: function() {
+                        $(".result").html("<span class='text-success'>Loading..</span>");
+                    },
+                    success: function(data) {
+                        console.log(data)
+                        $(".result").html(data);
+						$(".deleterenter").attr("disabled", true)
+                    }
+                })
+            }
+			
+        })
 
 	})
 </script>
